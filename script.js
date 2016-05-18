@@ -7,13 +7,13 @@ const scriptRules = require('./script.json');
 
 module.exports = new Script({
     processing: {
-        //prompt: (bot) => bot.say('Beep boop...'),
+        prompt: (bot) => bot.say('HELLO'),
         receive: () => 'processing'
     },
 
     start: {
         receive: (bot) => {
-            return bot.say('So you want to learn about Esther? Just say HELLO to get started.')
+            return bot.say('Vous voulez en savoir plus sur moi ? Commencez par demander l\'heure.')
                 .then(() => 'speak');
         }
     },
