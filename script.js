@@ -46,19 +46,30 @@ module.exports = new Script({
                 if (!_.has(scriptRules, upperText)) {
                     return bot.say(`Désolé, je ne comprends pas.`).then(() => 'speak');
                 }
-
-                var response = scriptRules[upperText];
-                var lines = response.split('\n');
-
-                var p = Promise.resolve();
-                _.each(lines, function(line) {
-                    line = line.trim();
+                
+              
+                if(upperText == "HELLO" || upperText == "HI" || upperText == "HEY" || upperText == "YO")
+                {
+                    var p = Promise.resolve();
                     p = p.then(function() {
-                        console.log(line);
-                        return bot.say(line);
-                    });
-                })
-
+                            console.log("Coucou");
+                            return bot.say("Coucou");
+                        });
+                }
+                else
+                {
+                    var response = scriptRules[upperText];
+                    var lines = response.split('\n');
+    
+                    var p = Promise.resolve();
+                    _.each(lines, function(line) {
+                        line = line.trim();
+                        p = p.then(function() {
+                            console.log(line);
+                            return bot.say(line);
+                        });
+                    })
+                }
                 return p.then(() => 'speak');
             }
 
