@@ -50,11 +50,12 @@ module.exports = new Script({
                 
                 if(upperText == 'HELLO' || upperText == 'HI' || upperText == 'HEY' || upperText == 'YO')
                 {
-                    var p = Promise.resolve();
+                    return bot.say("Coucou");
+                    /*var p = Promise.resolve();
                     p = p.then(function() {
                             console.log("Coucou");
                             return bot.say("Coucou");
-                        });
+                        });*/
                 }
                 else
                 {
