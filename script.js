@@ -48,7 +48,7 @@ module.exports = new Script({
                 }
                 
                 
-                /*if(upperText == "HELLO" || upperText == "HI" || upperText == "HEY" || upperText == "YO")
+                if(upperText == 'HELLO' || upperText == 'HI' || upperText == 'HEY' || upperText == 'YO')
                 {
                     var p = Promise.resolve();
                     p = p.then(function() {
@@ -56,7 +56,7 @@ module.exports = new Script({
                             return bot.say("Coucou");
                         });
                 }
-                else*/
+                else
                 {
                     var response = scriptRules[upperText];
                     var lines = response.split('\n');
