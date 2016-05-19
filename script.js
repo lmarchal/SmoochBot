@@ -47,7 +47,7 @@ module.exports = new Script({
                     return bot.say(`Désolé, je ne comprends pas.`).then(() => 'speak');
                 }
                 
-              
+              alert(upperText);
                 if(upperText == "HELLO" || upperText == "HI" || upperText == "HEY" || upperText == "YO")
                 {
                     var p = Promise.resolve();
