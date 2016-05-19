@@ -48,16 +48,16 @@ module.exports = new Script({
                 }
                 
                 
-                if(upperText == 'HELLO' || upperText == 'HI' || upperText == 'HEY' || upperText == 'YO')
+                /*if(upperText == 'HELLO' || upperText == 'HI' || upperText == 'HEY' || upperText == 'YO')
                 {
                     return bot.say("Coucou");
-                    /*var p = Promise.resolve();
+                    var p = Promise.resolve();
                     p = p.then(function() {
                             console.log("Coucou");
                             return bot.say("Coucou");
-                        });*/
+                        });
                 }
-                else
+                else*/
                 {
                     var response = scriptRules[upperText];
                     var lines = response.split('\n');
